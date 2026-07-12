@@ -1,20 +1,8 @@
-# Use Node.js official image
-FROM node:14
+# Use the official Nginx image
+FROM nginx:alpine
 
-# Set working directory
-WORKDIR /app
+# Copy your index.html into the default nginx html directory
+COPY index.html /usr/share/nginx/html/index.html
 
-# Copy backend files
-COPY backend/ ./backend
-# Copy frontend files
-COPY frontend/ ./frontend
-
-# Install dependencies
-WORKDIR /app/backend
-RUN npm init -y && npm install express
-
-# Expose port
-EXPOSE 3000
-
-# Start server
-CMD ["node", "server.js"]
+# Expose port 80
+EXPOSE 80
