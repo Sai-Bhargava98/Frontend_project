@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+h1 {
+  text-align: center;
+}
+.movie {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+}
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+#showtimes, #seats {
+  margin-top: 10px;
+}
+.seat {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #eee;
+  margin: 5px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+.seat.selected {
+  background-color: green;
+}
